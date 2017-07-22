@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="欢迎来到我的主页">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="闭包 所谓闭包 就是使用了外局局部变量的函数 这种现象就称为闭包 (使用外部局部变量的函数 从这句话就告诉我们闭包出现在函数嵌套的情形下）     严格来说函数本身就是闭包，因为它可以访问window下的变量 闭包的特点: 可以延长局部变量的声明周期 闭包的优点: 保护函数捏的变量安全，使其不能被外来人员修改，在内存中维持一个变量 具体来说 逻辑连续，当闭包作为另一个函数调用的参数时，避免脱离当前">
+<meta property="og:type" content="article">
+<meta property="og:title" content="闭包的理解">
+<meta property="og:url" content="http://yoursite.com/2015/12/22/闭包的理解/index.html">
 <meta property="og:site_name" content="lueying">
-<meta property="og:description" content="欢迎来到我的主页">
+<meta property="og:description" content="闭包 所谓闭包 就是使用了外局局部变量的函数 这种现象就称为闭包 (使用外部局部变量的函数 从这句话就告诉我们闭包出现在函数嵌套的情形下）     严格来说函数本身就是闭包，因为它可以访问window下的变量 闭包的特点: 可以延长局部变量的声明周期 闭包的优点: 保护函数捏的变量安全，使其不能被外来人员修改，在内存中维持一个变量 具体来说 逻辑连续，当闭包作为另一个函数调用的参数时，避免脱离当前">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-21T17:35:35.672Z">
+<meta property="og:updated_time" content="2017-07-22T05:06:04.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="欢迎来到我的主页">
+<meta name="twitter:title" content="闭包的理解">
+<meta name="twitter:description" content="闭包 所谓闭包 就是使用了外局局部变量的函数 这种现象就称为闭包 (使用外部局部变量的函数 从这句话就告诉我们闭包出现在函数嵌套的情形下）     严格来说函数本身就是闭包，因为它可以访问window下的变量 闭包的特点: 可以延长局部变量的声明周期 闭包的优点: 保护函数捏的变量安全，使其不能被外来人员修改，在内存中维持一个变量 具体来说 逻辑连续，当闭包作为另一个函数调用的参数时，避免脱离当前">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2015/12/22/闭包的理解/"/>
 
 
 
 
 
-  <title>关于我 | lueying</title>
+  <title>闭包的理解 | lueying</title>
   
 
 
@@ -267,18 +267,190 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline">关于我</h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/12/22/闭包的理解/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄先强">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lueying">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">闭包的理解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-22T22:25:47+08:00">
+                2015-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
-      <h1 id="欢迎来到我的主页"><a href="#欢迎来到我的主页" class="headerlink" title="欢迎来到我的主页"></a>欢迎来到我的主页</h1>
-    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><ul>
+<li>所谓闭包 就是使用了外局局部变量的函数 这种现象就称为闭包 (使用外部局部变量的函数 从这句话就告诉我们闭包出现在函数嵌套的情形下）    </li>
+<li>严格来说函数本身就是闭包，因为它可以访问window下的变量</li>
+<li>闭包的特点: 可以延长局部变量的声明周期</li>
+<li>闭包的优点: 保护函数捏的变量安全，使其不能被外来人员修改，在内存中维持一个变量 具体来说<ul>
+<li>逻辑连续，当闭包作为另一个函数调用的参数时，避免脱离当前逻辑</li>
+<li>方便调用上下文的局部变量</li>
+<li>加强封装性，可以达到对变量的保护作用</li>
+</ul>
+</li>
+<li><p>闭包的缺点：</p>
+<ul>
+<li>内存浪费，</li>
+<li>更加严重的是，对闭包的不当使用，会导致无效内存的产生</li>
+<li>闭包使用过多，可能会导致内存泄漏</li>
+</ul>
+</li>
+<li><p>闭包的应用场景</p>
+<ul>
+<li>框架封装(jquery的封装就是一个闭包)</li>
+<li>tab切换</li>
+<li>this的缓存</li>
+<li>沙箱模式 (匿名函数自调避免全局变量的污染、保护局部变量)</li>
+<li><p>数据缓存可以使用到闭包，如下:</p>
+<pre><code>var cache = (function() {
+var cache = {};
+return {
+    set: function(key, val) {
+        cache[key] = val;
+    },
+    get: function(key) {
+        return cache[key];
+    }
+};
+}());
+cache.set(&apos;张锐&apos;, &apos;中国人&apos;);
+cache.get(&apos;张锐&apos;); 
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<p>面试中关于闭包的经典题</p>
+<pre><code>// 题意大致为, 使用for循环实现每隔1s依次打印出数组中的四句话
+var arr = [&apos;第一句话&apos;, &apos;第二句话&apos;, &apos;第三句话&apos;, &apos;第四句话&apos;];
+for (var i = 0, len = arr.length; i &lt; len; i++) {
+    (function(i) {
+        setTimeout(function() {
+            console.log(arr[i]);
+        }, (i + 1) * 1000)
+    }(i))
+} 
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/22/H5和CSS3整理/" rel="prev" title="H5和CSS3整理">
+                H5和CSS3整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -393,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#欢迎来到我的主页"><span class="nav-number">1.</span> <span class="nav-text">欢迎来到我的主页</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">1.</span> <span class="nav-text">闭包</span></a></li></ol></div>
             
 
           </div>
@@ -504,10 +676,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 

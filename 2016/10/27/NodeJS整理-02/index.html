@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NodeJS,fs,http," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="nodeJS核心模块fs和http中路径问题nodeJS核心模块fsvar fs = require(&amp;#39;fs&amp;#39;); 通过fs这个模块来实例化一个fs对象，使用这个对象对文件进行操作 fs内置API readFile(path,[option],callback); path:指定要读取文件的路径 options:可选参数，指定要以何种编码格式，来读取文件内容，默认是null，一般文">
+<meta name="keywords" content="NodeJS,fs,http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NodeJS整理-01">
+<meta property="og:url" content="http://yoursite.com/2016/10/27/NodeJS整理-02/index.html">
+<meta property="og:site_name" content="lueying">
+<meta property="og:description" content="nodeJS核心模块fs和http中路径问题nodeJS核心模块fsvar fs = require(&amp;#39;fs&amp;#39;); 通过fs这个模块来实例化一个fs对象，使用这个对象对文件进行操作 fs内置API readFile(path,[option],callback); path:指定要读取文件的路径 options:可选参数，指定要以何种编码格式，来读取文件内容，默认是null，一般文">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-25T13:58:41.492Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NodeJS整理-01">
+<meta name="twitter:description" content="nodeJS核心模块fs和http中路径问题nodeJS核心模块fsvar fs = require(&amp;#39;fs&amp;#39;); 通过fs这个模块来实例化一个fs对象，使用这个对象对文件进行操作 fs内置API readFile(path,[option],callback); path:指定要读取文件的路径 options:可选参数，指定要以何种编码格式，来读取文件内容，默认是null，一般文">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/27/NodeJS整理-02/"/>
+
+
+
+
+
+  <title>NodeJS整理-01 | lueying</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lueying</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">年轻健康是幸福的，学习是快乐的，而我拥有全部！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/27/NodeJS整理-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄先强">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lueying">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">NodeJS整理-01</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-27T21:00:49+08:00">
+                2016-10-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="nodeJS核心模块fs和http中路径问题"><a href="#nodeJS核心模块fs和http中路径问题" class="headerlink" title="nodeJS核心模块fs和http中路径问题"></a>nodeJS核心模块fs和http中路径问题</h1><h2 id="nodeJS核心模块fs"><a href="#nodeJS核心模块fs" class="headerlink" title="nodeJS核心模块fs"></a>nodeJS核心模块fs</h2><p><code>var fs = require(&#39;fs&#39;);</code> 通过fs这个模块来实例化一个fs对象，使用这个对象对文件进行操作</p>
+<h3 id="fs内置API"><a href="#fs内置API" class="headerlink" title="fs内置API"></a>fs内置API</h3><ul>
+<li>readFile(path,[option],callback);</li>
+<li>path:指定要读取文件的路径</li>
+<li>options:可选参数，指定要以何种编码格式，来读取文件内容，默认是null，一般文件的编码格式都是utf-8;</li>
+<li>callback:回调函数，指定当文件读取成功后，如何操作读取到的内容,这个回调提供两个参数 err data</li>
+<li>如果没有发生错误的话，第一个参数Error对象为null,第二个参数是读取到的内容</li>
+<li>如果读取文件失败，第一个参数是一个真正的Error对象,第二个参数是undefined</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 如果没有指定读取时候的编码格式，默认读取到的data是一个二进制的Buffer对象</span></div><div class="line">  fs.readFile(<span class="string">'./files/1.txt'</span>,<span class="string">'utf-8'</span>,(err,data)=&gt;&#123;<span class="keyword">if</span>(err)<span class="keyword">throw</span> err.message;<span class="built_in">console</span>.log(data)&#125;)</div><div class="line">  如果文件读取失败的话，err是一个<span class="built_in">Error</span>对象，则<span class="keyword">if</span>判断成立，抛出错误，打印错误信息；反之err是<span class="literal">null</span>，<span class="keyword">if</span>判断不成立，打印读取到的文件内容。</div></pre></td></tr></table></figure>
+<ul>
+<li>writeFile(path,data,[options],callback)</li>
+<li>path:要写入文件的路径 (如果该路径下文件不存在，则会默认创建这个文件)</li>
+<li>data:要写入的数据内容</li>
+<li>options：可选参数，写入的数据内容的编码格式，此参数默认是utf-8，所以这个参数一般可以不写</li>
+<li>callbackl:回调函数，这个回调函数只有一个参数err， 如果写入成功，err是null 如果写入不成功 err是个Error对象  </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fs.writeFile(<span class="string">'./files/2.txt'</span>,<span class="string">'今天是个好日子'</span>,(err)=&gt;&#123;<span class="keyword">if</span>(err) <span class="keyword">throw</span> err.message;<span class="built_in">console</span>.log(<span class="string">"写入成功"</span>);&#125;)</div></pre></td></tr></table></figure>
+<p>​        <strong><em>fs.writeFile这个api之后写入的内容会把之前这个文件中的内容覆盖掉。</em></strong>  </p>
+<ul>
+<li><p>appendFile(path,data,callback)</p>
+</li>
+<li><p>path: 文件路径</p>
+</li>
+<li><p>data:向文件中追加内容</p>
+</li>
+<li><p>callback：只有一个err参数 同上，如果追加成功 err是null 如果追加不成功 err是个对象 if判断会成立。</p>
+<p><strong><em>值得注意的是，如果文件不存在也会默认创建这个文件，然后追加内容到这个空文件中。</em></strong></p>
+</li>
+</ul>
+<h3 id="fs模块中的路径问题"><a href="#fs模块中的路径问题" class="headerlink" title="fs模块中的路径问题"></a>fs模块中的路径问题</h3><ul>
+<li>在使用fs模块操作文件的时候，通过’./‘去查找文件的时候，并不是根据当前代码所在的目录去查找的</li>
+<li>而是根据当前运行node命令所在的目录去查找这个’./‘相对路径的。(也就是动态拼接了这个两个路径来寻找文件)</li>
+<li>为了解决node中fs模块路径的问题，node提供了一个__dirname</li>
+<li>经过测试发现__dirname拿到的永远都是node所运行的js文件所在的根目录，而不再是开启node命令所处的根目录。</li>
+<li>所以，今后凡是在fs模块中，需要操作路径时，一定要使用__dirname去拼接这个路径，</li>
+<li>最后值得注意的是，使用__dirname拼接路径的时候，拼接的字符串开头不能有./ ../ 只能是 /开头，然后可以决定是往下找还是往上跳</li>
+<li>笔者不太建议js文件路径低于需要操作的文件的路径，一般开发中也很少会出现这种情况，如果要往上掉 __dirname+”/../“这样操作</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fs.readFile(__dirname + <span class="string">'/1.txt'</span>, <span class="string">'utf-8'</span>, (err, dataStr) =&gt; &#123;</div><div class="line">  <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</div><div class="line">  <span class="built_in">console</span>.log(dataStr);</div><div class="line">&#125;);</div><div class="line">__dirname表示这个js文件所在的根目录，通过这个基准去拼接文件的路径。</div></pre></td></tr></table></figure>
+<h2 id="nodeJS核心模块http"><a href="#nodeJS核心模块http" class="headerlink" title="nodeJS核心模块http"></a>nodeJS核心模块http</h2><ol>
+<li>http核心模块，也是node官方提供的，能够很方便的创建一个web服务器</li>
+<li>var http = require(‘http’);</li>
+<li>创建一个web服务器</li>
+<li>var server = http.createServer();</li>
+<li>指定该服务器监听的端口号，再启动服务器</li>
+<li>server.listen(3000,()=&gt;{//当服务器启动ok之后，会调用回调函数。console.log(“Sever running at 127.0.0.1：3000”)});</li>
+<li>监听客户端的请求，并处理请求，最后把处理的结果通过网络返回给客户端，通过server.on(‘request’)为服务器绑定请求事件，每当有新的客户端请求我们服务器的时候，都会触发这个事件</li>
+<li>每当有请求过来，都能拿到这次请求的request对象，里面保存着请求头，请求报文，同样也有一个response对象，服务器处理完这个请求之后，可以通过这个对象将一些对应的数据通过网络返回给给我发起请求的页面。</li>
+<li>server.on(‘request’,(request,reponse)=&gt;{})</li>
+<li>在上面的这个箭头函数中，通过request.url 可以获取用户请求的URL地址</li>
+<li>比如127.0.0.1:3000/index.html就比如这个请求，那么获取到的URL是 ‘/index.html’</li>
+<li>根据用户请求的URL，返回对应的数据，</li>
+<li>如果返回的数据是比较简单的 比如文字或者单独的标签，那么需要指定返回数据的编码格式，不然返回给前台的数据将会是乱码</li>
+<li>response.writeHeader(200,{“Content-Type”:”text/plain;charset=utf-8”});</li>
+<li>如果我需要返回一个完整的页面给用户 那么不需要指定编码格式了，因为在返回的页面标签中已经指定了编码格式</li>
+<li>后台读取数据，比如读取html文件，使用fs.readFile(__dirname+’相对于当前app.js的路径’，(err,data)=&gt;{ })<code>app.js一般放在项目的根目录下</code></li>
+<li>一般情况下，我们返回给用户的数据是引入了其他资源的 这里以html为例，我需要返回一个index.html的页面内容给向我发起请求的用户，</li>
+<li>index.html页面引入了css、js资源，那么根据nodeJS请求这些静态资源的规则，默认是将根目录路径css、js的 href src属性进行拼接。基于这个规则设定，我们在index.html页面中引入这些静态资源的时候 都可以直接以项目根路径为基准，向下找。</li>
+<li>通过以上的设置，那么在请求静态资源的时候，获取到的URL值直接就是css、js这些文件的href、src的路径，如此就直接可以读取数据并返回给用户了。</li>
+<li>但是对于index.html这些资源而言，获取前台的URL值 跟后台要读取的index.html的路径就不是对应的了，起码会加多一层文件夹名称比如:</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (url === <span class="string">'/index.html'</span>) &#123;</div><div class="line">   <span class="comment">// 1. 先读取 /views/index.html 页面内容</span></div><div class="line">   <span class="comment">// 2. 使用 res.end() 方法，把第一步中读取到的内容返回给客户端</span></div><div class="line">   fs.readFile(__dirname + <span class="string">'/views/index.html'</span>, (err, data) =&gt; &#123;</div><div class="line">     <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</div><div class="line">     res.end(data);</div><div class="line">   &#125;);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<hr>
+<ol>
+<li>这个时候我们在想，如果用户能够在向后台请求index.html页面的时候，加多一层/views/,那样后台获取到的URL就跟读取后台index.html的路径一致。</li>
+<li>如果这种页面的路径有能够和URL保持一致，再加上index.html中的css、js的路径也跟URL是保持一致的，那么我们读取数据就可以使用获取到的URL的值，使用这个值的当做读取数据的读取路径，这样一下子就可以处理好前台所需的所有数据。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">server.on(<span class="string">'request'</span>, (req, res) =&gt; &#123;</div><div class="line">  <span class="comment">// 获取客户端请求的URL地址</span></div><div class="line">  <span class="keyword">var</span> url = req.url;</div><div class="line">  <span class="comment">//  127.0.0.1:3002/views/index.html</span></div><div class="line">  <span class="comment">//将URL请求的路径和fs读取文件时候的路径，对应上</span></div><div class="line">  fs.readFile(__dirname + url, (err, data) =&gt; &#123;</div><div class="line">    <span class="keyword">if</span> (err) <span class="keyword">return</span> res.end(<span class="string">'404'</span>);</div><div class="line">    res.end(data);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NodeJS/" rel="tag"># NodeJS</a>
+          
+            <a href="/tags/fs/" rel="tag"># fs</a>
+          
+            <a href="/tags/http/" rel="tag"># http</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/23/NodeJS整理-01/" rel="next" title="NodeJS整理-02">
+                <i class="fa fa-chevron-left"></i> NodeJS整理-02
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/03/NodeJS整理-03/" rel="prev" title="NodeJS整理-03">
+                NodeJS整理-03 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="黄先强" />
+          <p class="site-author-name" itemprop="name">黄先强</p>
+           
+              <p class="site-description motion-element" itemprop="description">保持动力，善于思考，乐于实践</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nodeJS核心模块fs和http中路径问题"><span class="nav-number">1.</span> <span class="nav-text">nodeJS核心模块fs和http中路径问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nodeJS核心模块fs"><span class="nav-number">1.1.</span> <span class="nav-text">nodeJS核心模块fs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fs内置API"><span class="nav-number">1.1.1.</span> <span class="nav-text">fs内置API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fs模块中的路径问题"><span class="nav-number">1.1.2.</span> <span class="nav-text">fs模块中的路径问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodeJS核心模块http"><span class="nav-number">1.2.</span> <span class="nav-text">nodeJS核心模块http</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">黄先强</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

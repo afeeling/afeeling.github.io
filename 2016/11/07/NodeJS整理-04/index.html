@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="H5,CSS3," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -93,18 +93,17 @@
 
 
 
-<meta name="description" content="HTML5和CSS3整理1.HTML5新增功能及基础归纳 语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section) 新增了一系列的智能表单 type类型扩展: email url date month week number range search tel 新增表单属性 placehoder autofoc">
-<meta name="keywords" content="H5,CSS3">
+<meta name="description" content="同步、异步、异步嵌套的区别 同步：严格按照代码书写顺序执行，代码效率不高，为什么？因为所有代码都是由主线程执行的 异步：效率高，为什么？因为耗时的操作都由子线程执行？抢先机制，无法保证执行顺序； 异步嵌套：效率也比较高，同时能够保证执行的顺序！   同步和异步方法如何捕获错误 同步：只能使用try catch,如果不是用try catch 出错之后，程序会崩溃； 异步：只能使用回调函数中提供的第">
 <meta property="og:type" content="article">
-<meta property="og:title" content="H5和CSS3整理">
-<meta property="og:url" content="http://yoursite.com/2016/06/22/H5和CSS3整理/index.html">
+<meta property="og:title" content="NodeJS整理-04">
+<meta property="og:url" content="http://yoursite.com/2016/11/07/NodeJS整理-04/index.html">
 <meta property="og:site_name" content="lueying">
-<meta property="og:description" content="HTML5和CSS3整理1.HTML5新增功能及基础归纳 语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section) 新增了一系列的智能表单 type类型扩展: email url date month week number range search tel 新增表单属性 placehoder autofoc">
+<meta property="og:description" content="同步、异步、异步嵌套的区别 同步：严格按照代码书写顺序执行，代码效率不高，为什么？因为所有代码都是由主线程执行的 异步：效率高，为什么？因为耗时的操作都由子线程执行？抢先机制，无法保证执行顺序； 异步嵌套：效率也比较高，同时能够保证执行的顺序！   同步和异步方法如何捕获错误 同步：只能使用try catch,如果不是用try catch 出错之后，程序会崩溃； 异步：只能使用回调函数中提供的第">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-22T05:04:08.182Z">
+<meta property="og:updated_time" content="2017-07-25T13:59:21.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="H5和CSS3整理">
-<meta name="twitter:description" content="HTML5和CSS3整理1.HTML5新增功能及基础归纳 语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section) 新增了一系列的智能表单 type类型扩展: email url date month week number range search tel 新增表单属性 placehoder autofoc">
+<meta name="twitter:title" content="NodeJS整理-04">
+<meta name="twitter:description" content="同步、异步、异步嵌套的区别 同步：严格按照代码书写顺序执行，代码效率不高，为什么？因为所有代码都是由主线程执行的 异步：效率高，为什么？因为耗时的操作都由子线程执行？抢先机制，无法保证执行顺序； 异步嵌套：效率也比较高，同时能够保证执行的顺序！   同步和异步方法如何捕获错误 同步：只能使用try catch,如果不是用try catch 出错之后，程序会崩溃； 异步：只能使用回调函数中提供的第">
 
 
 
@@ -132,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/22/H5和CSS3整理/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/07/NodeJS整理-04/"/>
 
 
 
 
 
-  <title>H5和CSS3整理 | lueying</title>
+  <title>NodeJS整理-04 | lueying</title>
   
 
 
@@ -277,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/22/H5和CSS3整理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/07/NodeJS整理-04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="黄先强">
@@ -294,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">H5和CSS3整理</h1>
+          <h1 class="post-title" itemprop="name headline">NodeJS整理-04</h1>
         
 
         <div class="post-meta">
@@ -306,8 +305,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-22T21:24:38+08:00">
-                2016-06-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-07T21:50:42+08:00">
+                2016-11-07
               </time>
             
 
@@ -329,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML5/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML5</span>
+                  <a href="/categories/NodeJS/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJS</span>
                   </a>
                 </span>
 
@@ -363,77 +362,54 @@
       
 
       
-        <h1 id="HTML5和CSS3整理"><a href="#HTML5和CSS3整理" class="headerlink" title="HTML5和CSS3整理"></a>HTML5和CSS3整理</h1><h3 id="1-HTML5新增功能及基础归纳"><a href="#1-HTML5新增功能及基础归纳" class="headerlink" title="1.HTML5新增功能及基础归纳"></a>1.HTML5新增功能及基础归纳</h3><ol>
-<li>语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section)</li>
-<li>新增了一系列的智能表单 type类型扩展: email url date month week number range search tel</li>
-<li>新增表单属性 placehoder autofocus pattern(正则表达式) dataList配合list使用，list的值为dataList的id值，autocomplete保存用户输入过的值 默认为on 关闭为off</li>
-<li>新增多媒体标签 video audio source(标记定义媒体资源添加不同源的媒体文件) canvas(应用库echarts) </li>
-<li>新增地理信息 nvigator.geolocation  getcurrentPosition(success,error) getwatchPosition多次定位请求</li>
-<li>新增本地存储 localStorage 大小为5M 永久存储 多页面共享数据 sessionStorage 大小20M 会话机制 不能共享数据 基本API setItem getItem romoveItem  cookie是服务器端的技术 大小是4k</li>
-<li>新增网络环境判断 online offline 局域网默认也是处于联网状态 navigator.online 返回true false navigator.offline断开网络连接  </li>
-<li>一些实用的新增的api 拖放的api 关于历史的API history.go() history.back() history.forward()</li>
-<li>事件监听 addEventListener  选择器 querySelector querySelectorALL</li>
-<li>获取class列表属性 classList classList.add() remove() contains() toggle()切换</li>
-<li>拖放API 拖拽元素:(ondragstart 拖拽前触发 ondrag 拖拽中 ondragend拖拽结束)；目标元素(ondragenter ondragover ondragleave ondrop注意这个事件必须现在ondragover里面阻止其默认行为 不然会回去的)</li>
-<li>离线存储 比如 渲染index.html页面的时候 需要请求 a.css b.js 如果需要离线存储a.css b.js那么在index页面的html 标签中写入<html manifest="test.manifest"> 那么test.manifest就相当于一个配置文件 内容大致为: CACHEMANIFEST (必须声明)  /a.css /b.js  (CACHE是缓存的意思) NETWORK:login.php （不需要被缓存） FALLBACK：/ihtml/ /offline.html (当html渲染出错后加载offline.html页面 比如404页面)</html></li>
-<li>HTML SSE Server-Sent 事件指的是网页自动获取来自服务器的更新 不必像以前一样需要去询问服务器</li>
-<li>文件读取 fileReader对象 使用这个对象必须先实例化 var fr = new FileReader()  fr.Astext或 fr.readAsDataURL(需要读取的数据)  数据一般存存储在input中的files[0]中 <h3 id="2-CSS3新增"><a href="#2-CSS3新增" class="headerlink" title="2.CSS3新增"></a>2.CSS3新增</h3></li>
-<li>选择器<ol>
-<li>属性选择器 比如 [class=’abc’] 选择所有类名为abc的元素 又比如P[class=’abc’]选择类名为abc的p标签</li>
-<li>伪类选择器 nth-child(n)  nth-of-type(n) </li>
-<li>其他选择器 :disabled :checked :empty :not </li>
-</ol>
+        <ul>
+<li>同步、异步、异步嵌套的区别<ul>
+<li>同步：严格按照代码书写顺序执行，代码效率不高，为什么？因为所有代码都是由主线程执行的</li>
+<li>异步：效率高，为什么？因为耗时的操作都由子线程执行？抢先机制，无法保证执行顺序；</li>
+<li>异步嵌套：效率也比较高，同时能够保证执行的顺序！</li>
+</ul>
 </li>
-<li>边框 <ol>
-<li>边框阴影 box-shadow  </li>
-<li>边框圆角 border-radius</li>
-<li>边框背景 border-image</li>
-</ol>
+<li>同步和异步方法如何捕获错误<ul>
+<li>同步：只能使用try catch,如果不是用try catch 出错之后，程序会崩溃；</li>
+<li>异步：只能使用回调函数中提供的第一个参数Error对象来判断；不能使用try catch;同步代码出错之后不会阻止后续代码执行！</li>
+</ul>
 </li>
-<li>背景<ol>
-<li>background-clip   规定背景的绘制区域</li>
-<li>background-origin 规定背景图片的定位区域</li>
-<li>background-size   规定背景图片的尺寸</li>
-</ol>
+<li>Node中模块化以及如何实现模块化?<ul>
+<li>主要解决了什么问题：主要解决了JS文件之间的依赖关系；</li>
+<li>通过 module， require， exports</li>
+</ul>
 </li>
-<li>多背景 background-image:url(),url()…</li>
-<li>渐变<ol>
-<li>线性渐变 linear-gradient(direction,color1 stop1,color2 stop2)</li>
-<li>径向渐变 radial-gradient()</li>
-</ol>
+<li>掌握用户模块向外暴露成员的两种方式<ul>
+<li>向global这个全局对象挂载成员【不推荐】</li>
+<li>推荐使用module.exports或者exports来向外暴露成员</li>
+</ul>
 </li>
-<li>css3字体 比如随意使用字体图标</li>
-<li>2d转换<ol>
-<li>transform transform-origin  2. translate  3. scale  4. rotate  5. skew</li>
-</ol>
+<li>module.exports和exports之间的关系<ul>
+<li>模块最终向外暴露的成员，以module.exports指向的对象为准</li>
+</ul>
 </li>
-<li>3D转换属性<ol>
-<li>transform-origin   2. transform-style    3. perspective    4. backface-visibility</li>
-</ol>
+<li>用户模块和第三方模块的查找规则<ul>
+<li>index -&gt; index.js -&gt; index.json -&gt; index.node</li>
+</ul>
 </li>
-<li>过渡属性<ol>
-<li>transition    2. transition-property    3. transition-duration    4. transtion-timing-function    5. transition-delay</li>
-</ol>
+<li>art-template结合Node的使用方式<ul>
+<li>template.compile得到render函数，再调用render(‘要渲染的数据’)</li>
+<li>template.render(‘要渲染的模板字符串’, 要渲染的数据对象)</li>
+<li>template(‘要渲染的模板文件的路径’, 要渲染的数据对象)</li>
+</ul>
 </li>
-<li>动画<ol>
-<li>@keyframes    2. animation    3. animation-name    4. animation-duration</li>
-<li>animation-timing-function    6. animation-delay    7. animation-play-state</li>
-</ol>
+<li>服务端渲染和客户端渲染的各自特点<ul>
+<li>服务端渲染:最大的优先 由于传输给浏览器的是一个完整的html字符串 所以对SEO友好，一般主页可以采用这种渲染方式，这种方式对服务器的压力大</li>
+<li>客户端渲染:由于在传输过程中是一个未编译的模板字符串，对SEO不友好</li>
+</ul>
 </li>
-<li>盒模型 <ol>
-<li>box-sizing  border-box content-box padding-box</li>
-</ol>
-</li>
-<li>弹性盒     <ol>
-<li>display-flex        2. flex-direction    3. justify-content     4. align-tiems    5. flex-wrap    </li>
-<li>align-content    7. order    8. align-self    9. flex</li>
-</ol>
-</li>
-<li>媒体查询<ol>
-<li>@media(min-width:800px) and(max-width:1200px){css样式}  800-1200之间的样式</li>
-</ol>
-</li>
-</ol>
+</ul>
+<h2 id="path路径处理模块"><a href="#path路径处理模块" class="headerlink" title="path路径处理模块"></a><code>path</code>路径处理模块</h2><ul>
+<li>拼接路径  path.join</li>
+<li>获取文件名 path.basename(path[, ext])</li>
+<li>获取扩展名 path.extname(path)</li>
+<li>获取文件所在路径 path.dirname(path)</li>
+</ul>
 
       
     </div>
@@ -461,14 +437,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/H5/" rel="tag"># H5</a>
-          
-            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
-          
-        </div>
-      
 
       
       
@@ -478,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/22/闭包的理解/" rel="next" title="闭包的理解">
-                <i class="fa fa-chevron-left"></i> 闭包的理解
+              <a href="/2016/11/03/NodeJS整理-03/" rel="next" title="NodeJS整理-03">
+                <i class="fa fa-chevron-left"></i> NodeJS整理-03
               </a>
             
           </div>
@@ -488,8 +456,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/23/NodeJS整理-01/" rel="prev" title="NodeJS整理-02">
-                NodeJS整理-02 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/20/初识Express-js/" rel="prev" title="Express.js整理">
+                Express.js整理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -620,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5和CSS3整理"><span class="nav-number">1.</span> <span class="nav-text">HTML5和CSS3整理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-HTML5新增功能及基础归纳"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.HTML5新增功能及基础归纳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-CSS3新增"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.CSS3新增</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#path路径处理模块"><span class="nav-number">1.</span> <span class="nav-text">path路径处理模块</span></a></li></ol></div>
             
 
           </div>

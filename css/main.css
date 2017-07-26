@@ -1678,7 +1678,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b685ff;
+  background: #4591ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2841,15 +2841,11 @@ pre .javascript .function {
     text-align: justify;
   }
 }
-body {
-  background-image: url("/images/template.png");
-  background-size: 100% 100%;
-}
 .post {
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 25px;
-  background: url("/images/21643957_1370325500333.png");
+  background: url("/images/138-14091F95621-50.jpg");
   background-size: 100% 100%;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);

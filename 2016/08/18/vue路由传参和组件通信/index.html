@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="H5,CSS3," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -93,18 +93,17 @@
 
 
 
-<meta name="description" content="HTML5和CSS3整理1.HTML5新增功能及基础归纳 语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section) 新增了一系列的智能表单 type类型扩展: email url date month week number range search tel 新增表单属性 placehoder autofoc">
-<meta name="keywords" content="H5,CSS3">
+<meta name="description" content="Vue中关于组件通信和路由传参路由传参的三种方式1、声明式导航传参    假设当前处于商品列表,当我点击某个商品 跳转到 购买该商品的路由 那我需要知道用户点击的这个商品的id  1、此时商品列表假设有如下:  (用户点击小米X4 我需要传递16给详情页组件 以便加载小米X4的详细信息)     &amp;lt;router-link to=&amp;apos;/shopping/16&amp;apos;&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="H5和CSS3整理">
-<meta property="og:url" content="http://yoursite.com/2016/06/22/H5和CSS3整理/index.html">
+<meta property="og:title" content="vue路由传参和组件通信">
+<meta property="og:url" content="http://yoursite.com/2016/08/18/vue路由传参和组件通信/index.html">
 <meta property="og:site_name" content="lueying">
-<meta property="og:description" content="HTML5和CSS3整理1.HTML5新增功能及基础归纳 语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section) 新增了一系列的智能表单 type类型扩展: email url date month week number range search tel 新增表单属性 placehoder autofoc">
+<meta property="og:description" content="Vue中关于组件通信和路由传参路由传参的三种方式1、声明式导航传参    假设当前处于商品列表,当我点击某个商品 跳转到 购买该商品的路由 那我需要知道用户点击的这个商品的id  1、此时商品列表假设有如下:  (用户点击小米X4 我需要传递16给详情页组件 以便加载小米X4的详细信息)     &amp;lt;router-link to=&amp;apos;/shopping/16&amp;apos;&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-22T05:04:08.182Z">
+<meta property="og:updated_time" content="2017-08-08T03:35:12.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="H5和CSS3整理">
-<meta name="twitter:description" content="HTML5和CSS3整理1.HTML5新增功能及基础归纳 语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section) 新增了一系列的智能表单 type类型扩展: email url date month week number range search tel 新增表单属性 placehoder autofoc">
+<meta name="twitter:title" content="vue路由传参和组件通信">
+<meta name="twitter:description" content="Vue中关于组件通信和路由传参路由传参的三种方式1、声明式导航传参    假设当前处于商品列表,当我点击某个商品 跳转到 购买该商品的路由 那我需要知道用户点击的这个商品的id  1、此时商品列表假设有如下:  (用户点击小米X4 我需要传递16给详情页组件 以便加载小米X4的详细信息)     &amp;lt;router-link to=&amp;apos;/shopping/16&amp;apos;&amp;gt;">
 
 
 
@@ -132,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/22/H5和CSS3整理/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/18/vue路由传参和组件通信/"/>
 
 
 
 
 
-  <title>H5和CSS3整理 | lueying</title>
+  <title>vue路由传参和组件通信 | lueying</title>
   
 
 
@@ -277,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/22/H5和CSS3整理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/18/vue路由传参和组件通信/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="黄先强">
@@ -294,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">H5和CSS3整理</h1>
+          <h1 class="post-title" itemprop="name headline">vue路由传参和组件通信</h1>
         
 
         <div class="post-meta">
@@ -306,8 +305,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-22T21:24:38+08:00">
-                2016-06-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-18T22:12:29+08:00">
+                2016-08-18
               </time>
             
 
@@ -329,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML5/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML5</span>
+                  <a href="/categories/Vue-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue.js</span>
                   </a>
                 </span>
 
@@ -363,77 +362,72 @@
       
 
       
-        <h1 id="HTML5和CSS3整理"><a href="#HTML5和CSS3整理" class="headerlink" title="HTML5和CSS3整理"></a>HTML5和CSS3整理</h1><h3 id="1-HTML5新增功能及基础归纳"><a href="#1-HTML5新增功能及基础归纳" class="headerlink" title="1.HTML5新增功能及基础归纳"></a>1.HTML5新增功能及基础归纳</h3><ol>
-<li>语义化标签 让页面结构更加清晰 使标签名更有意义 对SEO友好 (header nav article aside footer section)</li>
-<li>新增了一系列的智能表单 type类型扩展: email url date month week number range search tel</li>
-<li>新增表单属性 placehoder autofocus pattern(正则表达式) dataList配合list使用，list的值为dataList的id值，autocomplete保存用户输入过的值 默认为on 关闭为off</li>
-<li>新增多媒体标签 video audio source(标记定义媒体资源添加不同源的媒体文件) canvas(应用库echarts) </li>
-<li>新增地理信息 nvigator.geolocation  getcurrentPosition(success,error) getwatchPosition多次定位请求</li>
-<li>新增本地存储 localStorage 大小为5M 永久存储 多页面共享数据 sessionStorage 大小20M 会话机制 不能共享数据 基本API setItem getItem romoveItem  cookie是服务器端的技术 大小是4k</li>
-<li>新增网络环境判断 online offline 局域网默认也是处于联网状态 navigator.online 返回true false navigator.offline断开网络连接  </li>
-<li>一些实用的新增的api 拖放的api 关于历史的API history.go() history.back() history.forward()</li>
-<li>事件监听 addEventListener  选择器 querySelector querySelectorALL</li>
-<li>获取class列表属性 classList classList.add() remove() contains() toggle()切换</li>
-<li>拖放API 拖拽元素:(ondragstart 拖拽前触发 ondrag 拖拽中 ondragend拖拽结束)；目标元素(ondragenter ondragover ondragleave ondrop注意这个事件必须现在ondragover里面阻止其默认行为 不然会回去的)</li>
-<li>离线存储 比如 渲染index.html页面的时候 需要请求 a.css b.js 如果需要离线存储a.css b.js那么在index页面的html 标签中写入<html manifest="test.manifest"> 那么test.manifest就相当于一个配置文件 内容大致为: CACHEMANIFEST (必须声明)  /a.css /b.js  (CACHE是缓存的意思) NETWORK:login.php （不需要被缓存） FALLBACK：/ihtml/ /offline.html (当html渲染出错后加载offline.html页面 比如404页面)</html></li>
-<li>HTML SSE Server-Sent 事件指的是网页自动获取来自服务器的更新 不必像以前一样需要去询问服务器</li>
-<li>文件读取 fileReader对象 使用这个对象必须先实例化 var fr = new FileReader()  fr.Astext或 fr.readAsDataURL(需要读取的数据)  数据一般存存储在input中的files[0]中 <h3 id="2-CSS3新增"><a href="#2-CSS3新增" class="headerlink" title="2.CSS3新增"></a>2.CSS3新增</h3></li>
-<li>选择器<ol>
-<li>属性选择器 比如 [class=’abc’] 选择所有类名为abc的元素 又比如P[class=’abc’]选择类名为abc的p标签</li>
-<li>伪类选择器 nth-child(n)  nth-of-type(n) </li>
-<li>其他选择器 :disabled :checked :empty :not </li>
-</ol>
-</li>
-<li>边框 <ol>
-<li>边框阴影 box-shadow  </li>
-<li>边框圆角 border-radius</li>
-<li>边框背景 border-image</li>
-</ol>
-</li>
-<li>背景<ol>
-<li>background-clip   规定背景的绘制区域</li>
-<li>background-origin 规定背景图片的定位区域</li>
-<li>background-size   规定背景图片的尺寸</li>
-</ol>
-</li>
-<li>多背景 background-image:url(),url()…</li>
-<li>渐变<ol>
-<li>线性渐变 linear-gradient(direction,color1 stop1,color2 stop2)</li>
-<li>径向渐变 radial-gradient()</li>
-</ol>
-</li>
-<li>css3字体 比如随意使用字体图标</li>
-<li>2d转换<ol>
-<li>transform transform-origin  2. translate  3. scale  4. rotate  5. skew</li>
-</ol>
-</li>
-<li>3D转换属性<ol>
-<li>transform-origin   2. transform-style    3. perspective    4. backface-visibility</li>
-</ol>
-</li>
-<li>过渡属性<ol>
-<li>transition    2. transition-property    3. transition-duration    4. transtion-timing-function    5. transition-delay</li>
-</ol>
-</li>
-<li>动画<ol>
-<li>@keyframes    2. animation    3. animation-name    4. animation-duration</li>
-<li>animation-timing-function    6. animation-delay    7. animation-play-state</li>
-</ol>
-</li>
-<li>盒模型 <ol>
-<li>box-sizing  border-box content-box padding-box</li>
-</ol>
-</li>
-<li>弹性盒     <ol>
-<li>display-flex        2. flex-direction    3. justify-content     4. align-tiems    5. flex-wrap    </li>
-<li>align-content    7. order    8. align-self    9. flex</li>
-</ol>
-</li>
-<li>媒体查询<ol>
-<li>@media(min-width:800px) and(max-width:1200px){css样式}  800-1200之间的样式</li>
-</ol>
-</li>
-</ol>
+        <h1 id="Vue中关于组件通信和路由传参"><a href="#Vue中关于组件通信和路由传参" class="headerlink" title="Vue中关于组件通信和路由传参"></a>Vue中关于组件通信和路由传参</h1><h2 id="路由传参的三种方式"><a href="#路由传参的三种方式" class="headerlink" title="路由传参的三种方式"></a>路由传参的三种方式</h2><p>1、声明式导航传参   </p>
+<pre><code>假设当前处于商品列表,当我点击某个商品 跳转到 购买该商品的路由 那我需要知道用户点击的这个商品的id
+
+1、此时商品列表假设有如下:  (用户点击小米X4 我需要传递16给详情页组件 以便加载小米X4的详细信息)
+    &lt;router-link to=&apos;/shopping/16&apos;&gt;
+        &lt;li&gt;小米X4&lt;/li&gt;
+    &lt;/router-link&gt;
+
+2、那么此时需要main.js导入 import goodsInfo from &apos;./components/shop/goodsInfo.vue&apos;; 
+   然后在路由中配置{path:&apos;/shopping/:goodsId&apos;,component:goodsInfo}
+
+3、在商品详情页的goodsInfo组件中 就可以通过 this.$route.params.googdId拿到16，在生命周期钩子中执行ajax操作，拿到数据后渲染这个组件的内容。
+</code></pre><p>2、 编程式导航传参之一</p>
+<pre><code>1、仍然跟上面一样的步骤，只是方式不同，去除了声明式的繁琐操作
+    &lt;li @click = &apos;goShopping&apos;&gt;小米X4&lt;/li&gt;
+
+2、在此组件的导出对象中定义的方法 goShopping定义中，使用this.$router.push({name:&apos;aaa&apos;,path:&apos;/shopping&apos;,params:{goodsId:16}})  
+   这句相当于当触发click事件时，goshopping这个函数执行，$router.push这个方法会向 history 栈添加一个新的记录。
+
+3、main.js导入 import goodsInfo from &apos;./components/shop/goodsInfo.vue&apos;; 
+   然后在路由中配置{name:&apos;aaa&apos;,path:&apos;/shopping&apos;,component:goodsInfo}
+
+4、在商品详情页的goodsInfo组件中 就可以通过 this.$route.params.googdId拿到16，在生命周期钩子中执行ajax操作，拿到数据后渲染这个组件的内容。
+</code></pre><p>3、 编程式导航传参之二</p>
+<pre><code>1、仍然跟上面一样的步骤，只是方式不同，去除了声明式的繁琐操作
+    &lt;li @click = &apos;goShopping&apos;&gt;小米X4&lt;/li&gt;
+
+2、在此组件的导出对象中定义的方法 goShopping定义中，使用this.$router.push({path:&apos;/shopping&apos;,query:{goodsId:16}})，这句相当于当触发  
+  click事件时goshopping这个函数执行，$router.push这个方法会向 history 栈添加一个新的记录。
+
+3、main.js导入 import goodsInfo from &apos;./components/shop/goodsInfo.vue&apos;; 
+   然后在路由中配置{path:&apos;/shopping&apos;,component:goodsInfo}
+
+4、在商品详情页的goodsInfo组件中 就可以通过 this.$route.query.googdId拿到16，在生命周期钩子中执行ajax操作，拿到数据后渲染这个组件的内容。
+</code></pre><h2 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h2><p>1、父组件传值给子组件 通过props属性</p>
+<p>文字描述: </p>
+<ul>
+<li>在子组件的到处对象中声明props属性，这是个数组，在数组中定义一个变量，如：props:[“newsId”]</li>
+<li>在父组件中导入子组件，import  subcomponent from ‘./xxxxxx’;</li>
+<li>在父组件的导出对象中集成子组件，使用components属性 如： components:{subcomponent:subcomponent}</li>
+<li>在父组件的template中使用自定义标签<code>&lt;subcomponent :newsId=&quot;16&quot;&gt;&lt;/subcomponent&gt;</code></li>
+<li>这样子组件中就可以接收到16了 使用 this.newsId  </li>
+</ul>
+<p>2、子组件传值给父组件通过自定义事件（event）</p>
+<p>文字描述：</p>
+<ul>
+<li>在子组件中触发某个方法时，将需要的数据传递给父组件</li>
+<li>比如 <code>&lt;li @click=&#39;postContent()&#39;&gt;点击我，给父组件传值&lt;/li&gt;</code></li>
+<li>在methods对象中，<code>postContent(){const data = 某个表单的值; this.$emit(&quot;postData&quot;,data);}</code></li>
+<li>在父组件中监听这个postData事件，在集成子组件的自定义标签中绑定监听事件和处理函数</li>
+<li><code>&lt;subcomponent v-on:postData=&quot;getChildData&quot;&gt;&lt;/subcomponent&gt;</code></li>
+<li>getChildData这个函数的第一个参数就是子组件传递过来的data数据。</li>
+</ul>
+<p>3、非父子组件之间如何传值</p>
+<ul>
+<li>创建一个全局的Vue实例，在这个实例上载荷数据</li>
+<li>使用vuex建立全局仓库，使用该插件提供的对象、方法进行数据的读取和更改</li>
+</ul>
+<p>具体实现:第一种方式如下</p>
+<pre><code>在一个common文件夹中 导入vue 然后导出一个名字为bus的vue空实例
+
+分别在两个需要传递值的组件中导入这个bus ，在发送方组件中使用bus.$emit(&quot;postData&quot;,data)自定义事件和载荷数据
+
+在接收方组件中使用bus.$on(&quot;postData&quot;,function(data){console.log(data)}) 这样就可以拿到了。
+</code></pre><p>关于vuex的实现方式，下次有时间再补充，参考：<a href="https://vuex.vuejs.org/zh-cn/getting-started.html" target="_blank" rel="external">https://vuex.vuejs.org/zh-cn/getting-started.html</a></p>
+<p>​        </p>
 
       
     </div>
@@ -461,14 +455,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/H5/" rel="tag"># H5</a>
-          
-            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
-          
-        </div>
-      
 
       
       
@@ -478,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/22/闭包的理解/" rel="next" title="闭包的理解">
-                <i class="fa fa-chevron-left"></i> 闭包的理解
+              <a href="/2016/06/22/H5和CSS3整理/" rel="next" title="H5和CSS3整理">
+                <i class="fa fa-chevron-left"></i> H5和CSS3整理
               </a>
             
           </div>
@@ -488,8 +474,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/18/vue路由传参和组件通信/" rel="prev" title="vue路由传参和组件通信">
-                vue路由传参和组件通信 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/15/NodeJS整理-01/" rel="prev" title="NodeJS整理-02">
+                NodeJS整理-02 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -620,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML5和CSS3整理"><span class="nav-number">1.</span> <span class="nav-text">HTML5和CSS3整理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-HTML5新增功能及基础归纳"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.HTML5新增功能及基础归纳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-CSS3新增"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.CSS3新增</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue中关于组件通信和路由传参"><span class="nav-number">1.</span> <span class="nav-text">Vue中关于组件通信和路由传参</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路由传参的三种方式"><span class="nav-number">1.1.</span> <span class="nav-text">路由传参的三种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件通信"><span class="nav-number">1.2.</span> <span class="nav-text">组件通信</span></a></li></ol></li></ol></div>
             
 
           </div>
